@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ProjPoo.Elf">
+    <Position X="4.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAIAAAAAAAAEAAgIBAAA=</HashCode>
+      <FileName>Impl\Elf.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.Orc">
+    <Position X="2.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAIAAAAAAAAEAAgIBAAA=</HashCode>
+      <FileName>Impl\Orc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.21" />
+  </Class>
+  <Class Name="ProjPoo.Human">
+    <Position X="2.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAIAAAAAAAAEAAgIBAAA=</HashCode>
+      <FileName>Impl\Human.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.FlyweightTiles">
+    <Position X="1" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAACgA=</HashCode>
+      <FileName>Impl\FlyweightTiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjPoo.ForestImpl">
+    <Position X="2.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Impl\ForestImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.MountainImpl">
+    <Position X="2.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Impl\MountainImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.WaterImpl">
+    <Position X="4.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Impl\WaterImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.PlainImpl">
+    <Position X="4.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Impl\PlainImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.FactoryRace">
+    <Position X="1" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAQAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Impl\FactoryRace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjPoo.MapImpl">
+    <Position X="12.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgCAAACAAAAAAAgAAAAIAEAAEAAAAAAA=</HashCode>
+      <FileName>Impl\MapImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.GameBuilder">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAACEZAAAAAAAAAAAIAAAAAAEAAAAAAIAIAAAAAAAAA=</HashCode>
+      <FileName>Impl\GameBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjPoo.GameImpl">
+    <Position X="8.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAUAAAAAEAAIEAwAQAAAAAAQAAAAAAEFAAABIAAAA=</HashCode>
+      <FileName>Impl\GameImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.Demo">
+    <Position X="6.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
+      <FileName>Impl\Demo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.Small">
+    <Position X="6.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
+      <FileName>Impl\Small.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.Standard">
+    <Position X="6.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
+      <FileName>Impl\Standard.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.PlayerImpl">
+    <Position X="10.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAMAABAAAgAQAAAAAAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Impl\PlayerImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.FactoryPawn">
+    <Position X="1" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Impl\FactoryPawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjPoo.PawnImpl">
+    <Position X="2.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQBAAAAAAAAAAAYwCAAAAAAAABAAAAQAAAAAA=</HashCode>
+      <FileName>Impl\PawnImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.PositionImpl">
+    <Position X="2.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Impl\PositionImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjPoo.FactoryPosition">
+    <Position X="1" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Impl\FactoryPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ProjPoo.Game">
+    <Position X="1" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAIAAwAQAAAAAAQAAAAAAEFAAABIAAAA=</HashCode>
+      <FileName>API\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Player2" />
+      <Property Name="Player1" />
+      <Property Name="Mape" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="ProjPoo.Player">
+    <Position X="3.5" Y="0.75" Width="2" />
+    <AssociationLine Name="Pawns" Type="ProjPoo.Pawn">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.372" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Race" Type="ProjPoo.Race" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="0.75" />
+        <Point X="7.25" Y="0.75" />
+        <Point X="7.25" Y="0.5" />
+        <Point X="11" Y="0.5" />
+        <Point X="11" Y="0.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAEAAIAAAAAAgAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Players.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Race" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Pawns" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="ProjPoo.Race">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAIAAAAAAAAAAAgABAAA=</HashCode>
+      <FileName>API\Race.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjPoo.Map">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgCAAACAAAAAAAAAAAAIAEAAAAAAAAAA=</HashCode>
+      <FileName>API\Map.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tiles" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="ProjPoo.Tiles">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Tiles.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjPoo.Plain">
+    <Position X="11.5" Y="6.5" Width="1.5" />
+    <InheritanceLine Type="ProjPoo.Tiles" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="5.618" />
+        <Point X="8.75" Y="6.133" />
+        <Point X="12.312" Y="6.133" />
+        <Point X="12.312" Y="6.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Plain.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjPoo.Water">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Water.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjPoo.Mountain">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Mountain.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjPoo.Forest">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>API\Forest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjPoo.Pawn">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <AssociationLine Name="position" Type="ProjPoo.Position">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.329" Y="0.091" Height="0.162" Width="0.753" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQAAAAAAAAAAAAIQAAAAAAAAABAAAAQAAAAAA=</HashCode>
+      <FileName>API\Pawn.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="player" />
+      <Property Name="race" />
+      <Property Name="position" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="ProjPoo.Position">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>API\Position.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjPoo.FillAlgo">
+    <Position X="1" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
+      <FileName>API\FillAlgo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Map" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
