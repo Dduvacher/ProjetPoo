@@ -158,7 +158,7 @@
   <Interface Name="ProjPoo.Game">
     <Position X="1" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAEAAIAAwAQAAAAAAQAAAAAAEFAAABIAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAEAAIAAwAQAAAAAAQAAAAAAEFAAABIAAAA=</HashCode>
       <FileName>API\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

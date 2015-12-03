@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjPoo
 {
-    public interface GameBuildersuce
+    public interface GameBuilderInt
     {
         void addPlayer1(String name, Race race);
         void createGame();
@@ -19,14 +19,14 @@ namespace ProjPoo
         private Game game;
         private Map map;
 
-        public void addPlayer1(String name, Race race)
+        public void addPlayer1(Player p)
         {
-            throw new System.NotImplementedException();
+            game.Player1 = p;
         }
 
-        public void addPlayer2(String name, Race race)
+        public void addPlayer2(Player p)
         {
-            throw new System.NotImplementedException();
+            game.Player2 = p;
         }
 
         public GameImpl createGame()
@@ -51,8 +51,10 @@ namespace ProjPoo
         {
             game = createGame();
             map = createMap(size, game);
-            game.Turns = game.Mape.PhilAlgo.TURNS;
-
+            game.Turns = game.Mape.PhilAlgo.Turns;
+            game.Units = game.Mape.PhilAlgo.Units;
+            addPlayer1(player1);
+            addPlayer2(player2);
         }
     }
 }

@@ -19,5 +19,6 @@ namespace ProjPoo
         void endGame();
         Player winner();
         void enregister();
+        void game_is_over();
     }
 }
