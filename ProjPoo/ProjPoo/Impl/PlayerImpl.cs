@@ -12,6 +12,13 @@ namespace ProjPoo
         private List<Pawn> pawns;
         private Race race;
 
+        public PlayerImpl(string LName, string FName,Race r)
+        {
+            LastName = LName;
+            FirstName = FName;
+            race = r;
+        }
+
         public List<Pawn> Pawns
         {
             get
@@ -77,9 +84,25 @@ namespace ProjPoo
             }
         }
 
-        public void addPawns()
+        public void addPawns(int size,Race r)
         {
-            throw new NotImplementedException();
+            switch(size)
+            {
+                case 0:
+                    for (int i = 0; i < 4; i++)
+                        Pawns.Add(new PawnImpl(this,r));
+                    break;
+
+                case 1:
+                    for (int i = 0; i < 6; i++)
+                        Pawns.Add(new PawnImpl(this,r));
+                    break;
+
+                case 2:
+                    for (int i = 0; i < 8; i++)
+                        Pawns.Add(new PawnImpl(this,r));
+                    break;
+            }
         }
     }
 }

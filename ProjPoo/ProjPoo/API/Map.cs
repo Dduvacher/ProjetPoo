@@ -11,6 +11,8 @@ namespace ProjPoo
         int Size { get; set; }
         FillAlgo PhilAlgo { get; set; }
 
+        Tiles getTile(Position pos);
+
         void fillMap();
         void defAlgo(int size);
     }

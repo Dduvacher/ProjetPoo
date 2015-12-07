@@ -10,6 +10,13 @@ namespace ProjPoo
         int PosX { get; set; }
         int PosY { get; set; }
 
-        bool nextTo();
+        List<Pawn> Pawns { get; set; }
+
+        bool estVide();
+        bool nextTo(Position pos);
+
+        bool inRange(Position pos);
+
+        bool canMove(Pawn p);
     }
 }

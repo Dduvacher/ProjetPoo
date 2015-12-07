@@ -7,12 +7,32 @@ namespace ProjPoo
 {
     public class PawnImpl : Pawn
     {
-        public const int movePointMax = 2;
+        public const double movePointMax = 2;
         private Player player;
         private Position position;
         private Race race;
 
-        public int MovePoint
+        public PawnImpl(Player p, Race r)
+        {
+            player = p;
+            race = r;
+            MovePoint = movePointMax;
+        }
+
+        public Map map
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public double MovePoint
         {
             get
             {
@@ -69,9 +89,31 @@ namespace ProjPoo
             throw new NotImplementedException();
         }
 
-        public void move_action()
+        public void move_action(Position pos)
         {
-            throw new NotImplementedException();
+            if (this.position.nextTo(pos))
+            {
+                if (pos.estVide())
+                {
+                    if (pos.canMove(this))
+                    {
+                        this.position = pos;
+                        pos.Pawns.Add(this);
+                    }
+                }
+                else
+                {
+                    attack_action();
+                }
+            }
+
+            else if (this.race.GetType() == typeof(Elf))
+            {
+                if (this.position.inRange(pos))
+                {
+                    attack_action();
+                }
+            }
         }
     }
 }

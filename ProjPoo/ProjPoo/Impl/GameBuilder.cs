@@ -15,18 +15,21 @@ namespace ProjPoo
     public class GameBuilder
     {
         private int size;
-        private Player player1, player2;
+        private string player1FName, player2FName, player1LName, player2LName;
+        private Race race;
         private Game game;
         private Map map;
 
-        public void addPlayer1(Player p)
+        public void addPlayer1(string LastName, string FirstName,Race r)
         {
-            game.Player1 = p;
+            game.Player1 = new PlayerImpl(LastName,FirstName,r);
+            game.Player1.addPawns(size, game.Player1.Race);
         }
 
-        public void addPlayer2(Player p)
+        public void addPlayer2(string LastName, string FirstName, Race r)
         {
-            game.Player2 = p;
+            game.Player1 = new PlayerImpl(LastName, FirstName, r);
+            game.Player1.addPawns(size, game.Player1.Race);
         }
 
         public GameImpl createGame()
@@ -53,8 +56,8 @@ namespace ProjPoo
             map = createMap(size, game);
             game.Turns = game.Mape.PhilAlgo.Turns;
             game.Units = game.Mape.PhilAlgo.Units;
-            addPlayer1(player1);
-            addPlayer2(player2);
+            addPlayer1(player1LName,player1FName,race);
+            addPlayer2(player2LName, player2FName, race);
         }
     }
 }

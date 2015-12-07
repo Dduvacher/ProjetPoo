@@ -57,6 +57,11 @@ namespace ProjPoo
             defAlgo(size);
         }
 
+        public Tiles getTile(Position pos)
+        {
+            return tiles[pos.PosX + 6 * pos.PosY];
+        }
+
         public void defAlgo(int size)
         {
             switch (size)

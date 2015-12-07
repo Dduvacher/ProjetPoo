@@ -13,6 +13,6 @@ namespace ProjPoo
         int Point { get; set; }
         int Order { get; set; }
 
-        void addPawns();
+        void addPawns(int size,Race r);
     }
 }
