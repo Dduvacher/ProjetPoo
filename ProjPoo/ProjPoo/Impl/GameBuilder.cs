@@ -45,6 +45,15 @@ namespace ProjPoo
             return maap;
         }
 
+        public void chooseFirstPlayer()
+        {
+            Random r = new Random();
+            int i = r.Next(1);
+            if (i == 0)
+                game.Player1.isTurn = true;
+            else game.Player2.isTurn = true;
+        }
+
         public void loadGame(Game game)
         {
             throw new System.NotImplementedException();

@@ -12,6 +12,7 @@ namespace ProjPoo
         Race Race { get; set; }
         int Point { get; set; }
         int Order { get; set; }
+        bool isTurn { get; set; }
 
         void addPawns(int size,Race r);
     }

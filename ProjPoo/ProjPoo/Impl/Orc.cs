@@ -7,7 +7,7 @@ namespace ProjPoo
 {
     public class Orc : Race
     {
-        private List<int> victPoint;
+        private Dictionary<Tiles,int> victPoint;
 
         public int Attack
         {
@@ -75,5 +75,18 @@ namespace ProjPoo
                 throw new NotImplementedException();
             }
         }
+
+        public Orc()
+        {
+            Attack = 5;
+            Defence = 2;
+            Life = 17;
+            victPoint = new Dictionary<Tiles, int>();
+            victPoint.Add(FlyweightTiles.INSTANCE.getForest(), 1);
+            victPoint.Add(FlyweightTiles.INSTANCE.getMountain(), 2);
+            victPoint.Add(FlyweightTiles.INSTANCE.getPlain(), 1);
+            victPoint.Add(FlyweightTiles.INSTANCE.getWater(), 0);
+        }
+
     }
 }

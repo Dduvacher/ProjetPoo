@@ -7,5 +7,6 @@ namespace ProjPoo
 {
     public class ForestImpl : Forest
     {
+        public ForestImpl() { }
     }
 }

@@ -17,6 +17,7 @@ namespace ProjPoo
             LastName = LName;
             FirstName = FName;
             race = r;
+            isTurn = false;
         }
 
         public List<Pawn> Pawns
@@ -72,6 +73,19 @@ namespace ProjPoo
         }
 
         public int Order
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public bool isTurn
         {
             get
             {

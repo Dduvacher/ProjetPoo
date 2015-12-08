@@ -7,5 +7,6 @@ namespace ProjPoo
 {
     public class MountainImpl : Mountain
     {
+        public MountainImpl() { }
     }
 }

@@ -7,5 +7,6 @@ namespace ProjPoo
 {
     public class WaterImpl : Water
     {
+        public WaterImpl() { }
     }
 }

@@ -7,5 +7,6 @@ namespace ProjPoo
 {
     public class PlainImpl : Plain
     {
+        public PlainImpl() { }
     }
 }

@@ -13,9 +13,10 @@ namespace ProjPoo
         int Units { get; set; }
         int Turns { get; set; }
 
+
         void setTurns(int nbTurns);
         void setUnits(int nbUnits);
-        void endTurn();
+        void endTurn(Player p);
         void endGame();
         Player winner();
         void enregister();

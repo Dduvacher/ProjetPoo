@@ -7,19 +7,49 @@ namespace ProjPoo
 {
     public class FactoryRace
     {
-        public void createElf()
+        private static FactoryRace INSTANCE = new FactoryRace();
+        private Dictionary<string , Race> mapRace;
+
+        private FactoryRace()
         {
-            throw new System.NotImplementedException();
+            mapRace = new Dictionary<string, Race>();
         }
 
-        public void createHuman()
+
+        public Race getElf()
         {
-            throw new System.NotImplementedException();
+            Race r = mapRace["elf"];
+
+            if(r==null)
+            {
+                r = new Elf();
+                mapRace.Add("elf", r);
+            }
+            return r;
         }
 
-        public void createOrc()
+        public Race getHuman()
         {
-            throw new System.NotImplementedException();
+            Race r = mapRace["human"];
+
+            if (r == null)
+            {
+                r = new Human();
+                mapRace.Add("human", r);
+            }
+            return r;
+        }
+
+        public Race getOrc()
+        {
+            Race r = mapRace["orc"];
+
+            if (r == null)
+            {
+                r = new Orc();
+                mapRace.Add("orc", r);
+            }
+            return r;
         }
     }
 }

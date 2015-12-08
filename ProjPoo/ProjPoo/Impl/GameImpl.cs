@@ -106,10 +106,24 @@ namespace ProjPoo
 
         public void endTurn()
         {
-            throw new NotImplementedException();
+            if (this.Player1.Pawns.Count == 0)
+                this.endGame(Player2);
+            else if (this.Player2.Pawns.Count == 0)
+                this.endGame(Player1);
+
+            if (this.Player2.isTurn)
+            {
+                this.Player2.isTurn = false;
+                this.Player1.isTurn = true;
+            }
+            else
+            {
+                this.Player2.isTurn = true;
+                this.Player1.isTurn = false;
+            }
         }
 
-        public void endGame()
+        public void endGame(Player p)
         {
             throw new NotImplementedException();
         }

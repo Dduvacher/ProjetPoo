@@ -7,29 +7,61 @@ namespace ProjPoo
 {
     public class FlyweightTiles
     {
+
+        public static FlyweightTiles INSTANCE = new FlyweightTiles();
+        private Dictionary<string, Tiles> mapTiles;
+
         public FlyweightTiles()
         {
-            throw new System.NotImplementedException();
+            mapTiles = new Dictionary<string, Tiles>();
         }
 
-        public void getForest()
+        public Tiles getForest()
         {
-            throw new System.NotImplementedException();
+            Tiles t = mapTiles["forest"];
+
+            if (t == null)
+            {
+                t = new ForestImpl();
+                mapTiles.Add("forest", t);
+            }
+            return t;
         }
 
-        public void getMountain()
+        public Tiles getMountain()
         {
-            throw new System.NotImplementedException();
+            Tiles t = mapTiles["mountain"];
+
+            if (t == null)
+            {
+                t = new MountainImpl();
+                mapTiles.Add("mountain", t);
+            }
+            return t;
         }
 
-        public void getPlain()
+        public Tiles getPlain()
         {
-            throw new System.NotImplementedException();
+            Tiles t = mapTiles["plain"];
+
+            if (t == null)
+            {
+                t = new PlainImpl();
+                mapTiles.Add("plain", t);
+            }
+            return t;
         }
 
-        public void getWater()
+        public Tiles getWater()
         {
-            throw new System.NotImplementedException();
+            Tiles t = mapTiles["water"];
+
+            if (t == null)
+            {
+                t = new WaterImpl();
+                mapTiles.Add("water", t);
+            }
+            return t;
         }
     }
 }
