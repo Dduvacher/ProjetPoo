@@ -107,7 +107,15 @@ namespace ProjPoo
                 }
             }
 
-            else if (this.race.GetType() == typeof(Elf))
+            else if (this.race is Elf)
+            {
+                if (this.position.inRange(pos))
+                {
+                    attack_action();
+                }
+            }
+
+            else if (this.race is Orc && this.map.getTile(this.position) is Mountain)
             {
                 if (this.position.inRange(pos))
                 {

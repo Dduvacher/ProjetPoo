@@ -53,12 +53,12 @@ namespace ProjPoo
 
     public bool nextTo(Position pos)
         {
-            throw new NotImplementedException();
+            return Math.Abs(this.PosX - pos.PosX) + Math.Abs(this.PosY - pos.PosY) == 1;
         }
 
     public bool inRange(Position pos)
         {
-            throw new NotImplementedException();
+            return Math.Abs(this.PosX - pos.PosX) + Math.Abs(this.PosY - pos.PosY) <= 2;
         }
 
 
@@ -66,25 +66,21 @@ namespace ProjPoo
         {
             if(p.race is Elf)
             {
-                if(p.map.getTile(this) is Mountain) { }
-                else if (p.map.getTile(this) is Plain) { }
-                else if (p.map.getTile(this) is Forest) { }
-                else { }
+                if(p.map.getTile(this) is Mountain) { return p.MovePoint >= 2; }
+                else if (p.map.getTile(this) is Plain) { return p.MovePoint >= 1; }
+                else if (p.map.getTile(this) is Forest) { return p.MovePoint >= 1; }
+                else { return false; }
             }
             else if(p.race is Orc)
             {
-                if (p.map.getTile(this) is Mountain) { }
-                else if (p.map.getTile(this) is Plain) { }
-                else if (p.map.getTile(this) is Forest) { }
-                else { }
+                if (p.map.getTile(this) is Mountain) { return p.MovePoint >= 1; }
+                else if (p.map.getTile(this) is Plain) { return p.MovePoint >= 0.5; }
+                else if (p.map.getTile(this) is Forest) { return p.MovePoint >= 1; }
+                else { return false; }
             }
             else
             {
-                if (p.map.getTile(this) is Mountain) { }
-                else if (p.map.getTile(this) is Plain) { }
-                else if (p.map.getTile(this) is Forest) { }
-                else { }
-            }
+                return p.MovePoint >= 1;
         }
     }
 }
