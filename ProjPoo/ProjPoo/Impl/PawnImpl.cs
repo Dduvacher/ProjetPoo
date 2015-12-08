@@ -17,6 +17,7 @@ namespace ProjPoo
             player = p;
             race = r;
             MovePoint = movePointMax;
+            lifePoint = r.Life;
         }
 
         public Map map
@@ -84,9 +85,56 @@ namespace ProjPoo
             }
         }
 
-        public void attack_action()
+        public int lifePoint
         {
-            throw new NotImplementedException();
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public double getAttack()
+        {
+            return race.Attack * (lifePoint / race.Life);
+        }
+
+        public double getDefence()
+        {
+            return race.Defence * (lifePoint / race.Life);
+        }
+
+        public void attack_action(Position pos)
+        {
+            Random r = new Random();
+            Pawn def = pos.selectDefender();
+            int currentDef = r.Next(10) + (int)def.getDefence();
+            int currentAtt = r.Next(10) + (int)this.getAttack();
+            if (currentAtt > currentDef)
+            {
+                def.lifePoint -= currentAtt - currentDef;
+                if (def.lifePoint <= 0)
+                {
+                    def.position.Pawns.Remove(def);
+                    def.player.Pawns.Remove(def);
+                    if (def.position.estVide())
+                    {
+                        this.position.Pawns.Remove(this);
+                        this.position = pos;
+                        pos.Pawns.Add(this);
+                    }
+                }
+            }
+            else
+            {
+                this.lifePoint -= currentDef - currentAtt;
+                if (this.lifePoint <= 0)
+                    this.position.Pawns.Remove(this);
+            }
         }
 
         public void move_action(Position pos)
@@ -97,13 +145,18 @@ namespace ProjPoo
                 {
                     if (pos.canMove(this))
                     {
+                        this.position.Pawns.Remove(this);
                         this.position = pos;
                         pos.Pawns.Add(this);
+                        
                     }
                 }
                 else
                 {
-                    attack_action();
+                    if (pos.canMove(this))
+                    {
+                        attack_action(pos);
+                    }
                 }
             }
 
@@ -111,7 +164,7 @@ namespace ProjPoo
             {
                 if (this.position.inRange(pos))
                 {
-                    attack_action();
+                    attack_action(pos);
                 }
             }
 
@@ -119,9 +172,11 @@ namespace ProjPoo
             {
                 if (this.position.inRange(pos))
                 {
-                    attack_action();
+                    attack_action(pos);
                 }
             }
         }
+
+
     }
 }

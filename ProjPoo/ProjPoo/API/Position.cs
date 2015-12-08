@@ -18,5 +18,7 @@ namespace ProjPoo
         bool inRange(Position pos);
 
         bool canMove(Pawn p);
+
+        Pawn selectDefender();
     }
 }
