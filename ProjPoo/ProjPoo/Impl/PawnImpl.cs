@@ -133,7 +133,10 @@ namespace ProjPoo
             {
                 this.lifePoint -= currentDef - currentAtt;
                 if (this.lifePoint <= 0)
+                {
                     this.position.Pawns.Remove(this);
+                    this.player.Pawns.Remove(this);
+                }
             }
         }
 
@@ -148,7 +151,6 @@ namespace ProjPoo
                         this.position.Pawns.Remove(this);
                         this.position = pos;
                         pos.Pawns.Add(this);
-                        
                     }
                 }
                 else

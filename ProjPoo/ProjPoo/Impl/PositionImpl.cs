@@ -75,23 +75,24 @@ namespace ProjPoo
 
         public bool canMove(Pawn p)
         {
+            bool res = false;
             if (p.race is Elf)
             {
-                if (p.map.getTile(this) is Mountain) { return p.MovePoint >= 2; }
-                else if (p.map.getTile(this) is Plain) { return p.MovePoint >= 1; }
-                else if (p.map.getTile(this) is Forest) { return p.MovePoint >= 1; }
-                else { return false; }
+                if (p.map.getTile(this) is Mountain) { res= p.MovePoint >= 2; p.MovePoint -= 2; return res; }
+                else if (p.map.getTile(this) is Plain) { res= p.MovePoint >= 1; p.MovePoint -= 1; return res; }
+                else if (p.map.getTile(this) is Forest) { res= p.MovePoint >= 1; p.MovePoint -= 1; return res; }
+                else { return res; }
             }
             else if (p.race is Orc)
             {
-                if (p.map.getTile(this) is Mountain) { return p.MovePoint >= 1; }
-                else if (p.map.getTile(this) is Plain) { return p.MovePoint >= 0.5; }
-                else if (p.map.getTile(this) is Forest) { return p.MovePoint >= 1; }
+                if (p.map.getTile(this) is Mountain) { res= p.MovePoint >= 1; p.MovePoint -= 1; return res; }
+                else if (p.map.getTile(this) is Plain) { res= p.MovePoint >= 0.5; p.MovePoint -= 0.5; return res; }
+                else if (p.map.getTile(this) is Forest) { res= p.MovePoint >= 1; p.MovePoint -= 1; return res; }
                 else { return false; }
             }
             else
             {
-                return p.MovePoint >= 1;
+                res= p.MovePoint >= 1; p.MovePoint -= 1; return res;
             }
         }
     }
