@@ -27,7 +27,7 @@
   <Class Name="ProjPoo.FlyweightTiles">
     <Position X="1" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAACgA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAAACAAAACgA=</HashCode>
       <FileName>Impl\FlyweightTiles.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,14 +66,14 @@
   <Class Name="ProjPoo.FactoryRace">
     <Position X="1" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAQAIAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAIAAAAQAAAAAAEAAIAAAAAA=</HashCode>
       <FileName>Impl\FactoryRace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjPoo.MapImpl">
     <Position X="12.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgCAAACAAAAAAAgAAAAIAEAAEAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgCAAACAAIAAAAgAAAAIAEAAEAAEAAAA=</HashCode>
       <FileName>Impl\MapImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -81,7 +81,7 @@
   <Class Name="ProjPoo.GameBuilder">
     <Position X="7" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACEdAAAAAEAACAAIAAAAAAEAAAAAAIAIAAAAEAACA=</HashCode>
+      <HashCode>AAACEdAAAAAEAACAAIAAAAAAEAAAAAAIAIAACAEAACA=</HashCode>
       <FileName>Impl\GameBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -120,7 +120,7 @@
   <Class Name="ProjPoo.PlayerImpl">
     <Position X="10.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAEAAMAABAAAgAQAAAAAAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>QAEAAMAgBAAAgAQAAAAAAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Impl\PlayerImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -135,7 +135,7 @@
   <Class Name="ProjPoo.PawnImpl">
     <Position X="2.75" Y="17.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEEAQBAAAAAAAAAAAYwCAAAAAAAABAAAAQAAAAAA=</HashCode>
+      <HashCode>AAAgEEAQBAAAAAAACAAAYwCAAAAAAAABAAAAwAAAAAA=</HashCode>
       <FileName>Impl\PawnImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -143,7 +143,7 @@
   <Class Name="ProjPoo.PositionImpl">
     <Position X="2.75" Y="21" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAQAAAAAwAAAAAAAAAAACEAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAwAAAAAIAAAAACEAAAAIAAAA=</HashCode>
       <FileName>Impl\PositionImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -183,7 +183,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>QAEAAIAAAAAAgAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAEAAIAgAAAAgAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>API\Players.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -203,25 +203,25 @@
   <Interface Name="ProjPoo.Map">
     <Position X="1" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgCAAACAAAAAAAAAAAAIAEAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgCAAACAAIAAAAAAAAAIAEAAAAAEAAAA=</HashCode>
       <FileName>API\Map.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjPoo.Tiles">
-    <Position X="8.5" Y="4.75" Width="1.5" />
+    <Position X="9.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>API\Tiles.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjPoo.Plain">
-    <Position X="11.5" Y="6.5" Width="1.5" />
+    <Position X="11.5" Y="7" Width="1.5" />
     <InheritanceLine Type="ProjPoo.Tiles" ManuallyRouted="true" FixedToPoint="true">
       <Path>
-        <Point X="9.25" Y="5.618" />
-        <Point X="9.25" Y="6.133" />
+        <Point X="10" Y="5.118" />
+        <Point X="10" Y="6.133" />
         <Point X="12.312" Y="6.133" />
-        <Point X="12.312" Y="6.5" />
+        <Point X="12.312" Y="7" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -230,21 +230,21 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjPoo.Water">
-    <Position X="9.25" Y="6.5" Width="1.5" />
+    <Position X="9.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>API\Water.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjPoo.Mountain">
-    <Position X="7" Y="6.5" Width="1.5" />
+    <Position X="7.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>API\Mountain.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjPoo.Forest">
-    <Position X="4.75" Y="6.5" Width="1.5" />
+    <Position X="5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>API\Forest.cs</FileName>
@@ -258,7 +258,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAEEAQAAAAAAAAAAAAIQAAAAAAAAABAAAAQAAAAAA=</HashCode>
+      <HashCode>AAAgEEAQAAAAAAAACAAAIQAAAAAAAAABAAAAwAAAAAA=</HashCode>
       <FileName>API\Pawn.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -268,14 +268,14 @@
     </ShowAsAssociation>
   </Interface>
   <Interface Name="ProjPoo.Position">
-    <Position X="6.5" Y="2.75" Width="1.5" />
+    <Position X="4.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAQAAAAAwAAAAAAAAAAACEAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAwAAAAAIAAAAACEAAAAIAAAA=</HashCode>
       <FileName>API\Position.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjPoo.FillAlgo">
-    <Position X="1" Y="6.5" Width="1.5" />
+    <Position X="1" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
       <FileName>API\FillAlgo.cs</FileName>

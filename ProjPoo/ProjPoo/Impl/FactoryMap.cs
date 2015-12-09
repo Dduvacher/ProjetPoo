@@ -7,9 +7,10 @@ namespace ProjPoo
 {
     public class FactoryMap
     {
-        public void createMap()
+        public static FactoryMap INSTANCE = new FactoryMap();
+        public Map createMap(int size)
         {
-            throw new System.NotImplementedException();
+            return new MapImpl(size);
         }
     }
 }

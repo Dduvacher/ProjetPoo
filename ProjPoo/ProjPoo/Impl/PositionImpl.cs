@@ -46,6 +46,33 @@ namespace ProjPoo
             }
         }
 
+        public PositionImpl(int x, int y)
+        {
+            PosX = x;
+            PosY = y;
+            Pawns = new List<Pawn>();
+        }
+
+        public bool putOn(Pawn p,Tiles t)
+        {
+            if (p.race is Elf || p.race is Orc)
+            {
+                if (t is Water) {return false; }
+                else
+                {
+                    p.position = this;
+                    this.Pawns.Add(p);
+                    return true;
+                }
+            }
+            else
+            {
+                p.position = this;
+                this.Pawns.Add(p);
+                return true;
+            }
+        }
+
         public bool estVide()
         {
             return Pawns.Count == 0;
@@ -78,21 +105,21 @@ namespace ProjPoo
             bool res = false;
             if (p.race is Elf)
             {
-                if (p.map.getTile(this) is Mountain) { res= p.MovePoint >= 2; p.MovePoint -= 2; return res; }
-                else if (p.map.getTile(this) is Plain) { res= p.MovePoint >= 1; p.MovePoint -= 1; return res; }
-                else if (p.map.getTile(this) is Forest) { res= p.MovePoint >= 1; p.MovePoint -= 1; return res; }
+                if (p.map.getTile(this) is Mountain) {return res= p.MovePoint >= 2;}
+                else if (p.map.getTile(this) is Plain) { return res= p.MovePoint >= 1;}
+                else if (p.map.getTile(this) is Forest) {return res= p.MovePoint >= 1;}
                 else { return res; }
             }
             else if (p.race is Orc)
             {
-                if (p.map.getTile(this) is Mountain) { res= p.MovePoint >= 1; p.MovePoint -= 1; return res; }
-                else if (p.map.getTile(this) is Plain) { res= p.MovePoint >= 0.5; p.MovePoint -= 0.5; return res; }
-                else if (p.map.getTile(this) is Forest) { res= p.MovePoint >= 1; p.MovePoint -= 1; return res; }
+                if (p.map.getTile(this) is Mountain) {return res= p.MovePoint >= 1;}
+                else if (p.map.getTile(this) is Plain) { return res= p.MovePoint >= 0.5;}
+                else if (p.map.getTile(this) is Forest) { return res= p.MovePoint >= 1;}
                 else { return false; }
             }
             else
             {
-                res= p.MovePoint >= 1; p.MovePoint -= 1; return res;
+                return res= p.MovePoint >= 1;
             }
         }
     }

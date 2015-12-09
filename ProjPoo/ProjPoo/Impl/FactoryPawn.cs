@@ -7,9 +7,11 @@ namespace ProjPoo
 {
     public class FactoryPawn
     {
-        public void createPawn()
+
+        public static FactoryPawn INSTANCE = new FactoryPawn();
+        public Pawn createPawn(Player p, Race r)
         {
-            throw new System.NotImplementedException();
+            return new PawnImpl(p, r);
         }
     }
 }

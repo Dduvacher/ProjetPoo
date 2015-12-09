@@ -7,7 +7,7 @@ namespace ProjPoo
 {
     public class FactoryRace
     {
-        private static FactoryRace INSTANCE = new FactoryRace();
+        public static FactoryRace INSTANCE = new FactoryRace();
         private Dictionary<string , Race> mapRace;
 
         private FactoryRace()

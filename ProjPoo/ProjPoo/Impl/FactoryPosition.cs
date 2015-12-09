@@ -7,9 +7,10 @@ namespace ProjPoo
 {
     public class FactoryPosition
     {
-        public void createPosition()
+        public static FactoryPosition INSTANCE = new FactoryPosition();
+        public Position createPosition(int x , int y)
         {
-            throw new System.NotImplementedException();
+            return new PositionImpl(x, y);
         }
     }
 }

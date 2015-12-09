@@ -16,8 +16,8 @@ namespace ProjPoo
 
         void setTurns(int nbTurns);
         void setUnits(int nbUnits);
-        void endTurn(Player p);
-        void endGame();
+        void endTurn();
+        void endGame(Player p);
         Player winner();
         void enregister();
         void game_is_over();

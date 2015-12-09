@@ -37,9 +37,9 @@ namespace ProjPoo
             return new GameImpl();
         }
 
-        public MapImpl createMap(int size,Game game)
+        public Map createMap(int size,Game game)
         {
-            MapImpl maap = new MapImpl(size);
+            Map maap = FactoryMap.INSTANCE.createMap(size);
             maap.fillMap();
             game.Mape=maap;
             return maap;
@@ -52,6 +52,27 @@ namespace ProjPoo
             if (i == 0)
                 game.Player1.isTurn = true;
             else game.Player2.isTurn = true;
+        }
+
+        public void putUnits()
+        {
+            int i = 0;
+            int j = 0;
+            Map map = game.Mape;
+            Position pos;
+            foreach (Pawn p in game.Player1.Pawns)
+            {
+                pos = map.positions[i];
+                pos.putOn(p, map.getTile(pos));
+                i++;
+            }
+
+            foreach (Pawn p in game.Player1.Pawns)
+            {
+                pos = map.positions[map.positions.Count-j];
+                pos.putOn(p, map.getTile(pos));
+                j++;
+            }
         }
 
         public void loadGame(Game game)
@@ -67,6 +88,8 @@ namespace ProjPoo
             game.Units = game.Mape.PhilAlgo.Units;
             addPlayer1(player1LName,player1FName,race);
             addPlayer2(player2LName, player2FName, race);
+            chooseFirstPlayer();
+            putUnits();
         }
     }
 }

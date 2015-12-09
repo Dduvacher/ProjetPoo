@@ -20,5 +20,7 @@ namespace ProjPoo
         bool canMove(Pawn p);
 
         Pawn selectDefender();
+
+        bool putOn(Pawn p, Tiles t);
     }
 }

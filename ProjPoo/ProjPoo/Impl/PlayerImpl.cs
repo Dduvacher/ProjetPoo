@@ -104,17 +104,17 @@ namespace ProjPoo
             {
                 case 0:
                     for (int i = 0; i < 4; i++)
-                        Pawns.Add(new PawnImpl(this,r));
+                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this,r));
                     break;
 
                 case 1:
                     for (int i = 0; i < 6; i++)
-                        Pawns.Add(new PawnImpl(this,r));
+                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r));
                     break;
 
                 case 2:
                     for (int i = 0; i < 8; i++)
-                        Pawns.Add(new PawnImpl(this,r));
+                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r));
                     break;
             }
         }
