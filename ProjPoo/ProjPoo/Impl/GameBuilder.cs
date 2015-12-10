@@ -19,17 +19,23 @@ namespace ProjPoo
         private int size;
 
         //nom et prénom des joueurs
-        private string player1FName, player2FName, player1LName, player2LName;
+        public string player1FName, player2FName, player1LName, player2LName;
 
         //respectivement race du joueur 1 et du joueur 2
-        private Race race1;
-        private Race race2;
+        public Race race1;
+        public Race race2;
 
         //l'objet game en lui même la ou est rassemblé la plupart des infos
-        private Game game;
+        public Game game;
 
         //map de la game
         private Map map;
+
+        // ajoute la size
+        public void addsize(int size)
+        {
+            this.size = size;
+        }
 
         //ajoute le joueur 1 a la game
         public void addPlayer1(string LastName, string FirstName,Race r)

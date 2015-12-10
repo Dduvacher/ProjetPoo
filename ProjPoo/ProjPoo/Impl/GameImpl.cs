@@ -80,12 +80,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return Ended;
             }
 
             set
             {
-                throw new NotImplementedException();
+                Ended = value;
             }
         }
 
