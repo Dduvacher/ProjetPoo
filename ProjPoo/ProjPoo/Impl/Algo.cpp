@@ -14,6 +14,18 @@ using namespace std;
 void Algo::fillMap(TileType map[], int size)
 {
 	//TODO : init map tiles with a better algorithm
-	for (int i = 0; i < size; i++)
-		map[i] = (TileType)(i % 4);
+	srand(time(NULL));
+	int counter[] = { 0, 0, 0, 0 };
+	int max = size / 4;
+	int random =rand() % 4;
+	for (int i = 0; i < size; i++) 
+	{
+		while (counter[random] > max)
+		{
+			random = rand() % 4;
+		}
+		map[i] = (TileType)random;
+		counter[random]++;
+		random = rand() % 4;
+	}
 }

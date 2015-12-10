@@ -98,23 +98,23 @@ namespace ProjPoo
             }
         }
 
-        public void addPawns(int size,Race r)
+        public void addPawns(int size,Race r,Map m)
         {
             switch(size)
             {
                 case 0:
                     for (int i = 0; i < 4; i++)
-                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this,r));
+                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this,r,m));
                     break;
 
                 case 1:
                     for (int i = 0; i < 6; i++)
-                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r));
+                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r,m));
                     break;
 
                 case 2:
                     for (int i = 0; i < 8; i++)
-                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r));
+                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r,m));
                     break;
             }
         }

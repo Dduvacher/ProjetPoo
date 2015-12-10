@@ -12,13 +12,15 @@ namespace ProjPoo
         private Position position;
         private Race race;
 
-        public PawnImpl(Player p, Race r)
+        public PawnImpl(Player p, Race r,Map m)
         {
             player = p;
             race = r;
             MovePoint = movePointMax;
             lifePoint = r.Life;
+            map = m;
         }
+
 
         public Map map
         {

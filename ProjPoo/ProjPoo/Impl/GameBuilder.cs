@@ -23,13 +23,13 @@ namespace ProjPoo
         public void addPlayer1(string LastName, string FirstName,Race r)
         {
             game.Player1 = new PlayerImpl(LastName,FirstName,r);
-            game.Player1.addPawns(size, game.Player1.Race);
+            game.Player1.addPawns(size, game.Player1.Race,game.Mape);
         }
 
         public void addPlayer2(string LastName, string FirstName, Race r)
         {
             game.Player1 = new PlayerImpl(LastName, FirstName, r);
-            game.Player1.addPawns(size, game.Player1.Race);
+            game.Player1.addPawns(size, game.Player1.Race,game.Mape);
         }
 
         public GameImpl createGame()

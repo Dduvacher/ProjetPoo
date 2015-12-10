@@ -13,6 +13,8 @@ namespace ProjPoo
 
         Map Map { get; set; }
 
-        void execute();
+        ModelEtudiant.Algo algo {get;set;} 
+
+        int[] execute();
     }
 }

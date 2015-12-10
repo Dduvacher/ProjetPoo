@@ -9,9 +9,9 @@ namespace ProjPoo
     {
 
         public static FactoryPawn INSTANCE = new FactoryPawn();
-        public Pawn createPawn(Player p, Race r)
+        public Pawn createPawn(Player p, Race r,Map m)
         {
-            return new PawnImpl(p, r);
+            return new PawnImpl(p, r,m);
         }
     }
 }

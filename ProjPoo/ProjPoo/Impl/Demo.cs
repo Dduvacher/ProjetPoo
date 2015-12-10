@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ModelEtudiant;
 
 namespace ProjPoo
 {
@@ -32,15 +33,29 @@ namespace ProjPoo
             get; set;
         }
 
+        public Algo algo
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public Demo()
         {
             Units = 4;
             Turns = 5;
+            algo = new Algo();
         }
 
-        public void execute()
+        public int[] execute()
         {
-            throw new NotImplementedException();
+            return algo.FillMap(map.Size);
         }
     }
 }

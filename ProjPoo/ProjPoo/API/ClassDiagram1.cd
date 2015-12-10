@@ -81,7 +81,7 @@
   <Class Name="ProjPoo.GameBuilder">
     <Position X="7" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACEdAAAAAEAACAAIAAAAAAEAAAAAAIAIAACAEAACA=</HashCode>
+      <HashCode>AAACEdAAAAAEAACAAIAgAAAAEAAAAAAIAIAACAEAACA=</HashCode>
       <FileName>Impl\GameBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -96,7 +96,7 @@
   <Class Name="ProjPoo.Demo">
     <Position X="6.25" Y="14" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAABAAAAAAAAAEAAABAAAAAAAAEEAAAAAAAAA=</HashCode>
       <FileName>Impl\Demo.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -104,7 +104,7 @@
   <Class Name="ProjPoo.Small">
     <Position X="6.25" Y="19" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAABAAAAAAAAAEAAABAAAAAAAAEEAAAAAAAAA=</HashCode>
       <FileName>Impl\Small.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -112,7 +112,7 @@
   <Class Name="ProjPoo.Standard">
     <Position X="6.25" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAABAAAAAAAAAEAAABAAAAAAAAEEAAAAAAAAA=</HashCode>
       <FileName>Impl\Standard.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -128,14 +128,14 @@
   <Class Name="ProjPoo.FactoryPawn">
     <Position X="1" Y="17.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>Impl\FactoryPawn.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjPoo.PawnImpl">
     <Position X="2.75" Y="17.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgEEAQBAAAAAAACAAAYwCAAAAAAAABAAAAwAAAAAA=</HashCode>
+      <HashCode>ABAgEEAQBAAAAAAACAAAYwCAAAAAAAABAAAAwAAAAAA=</HashCode>
       <FileName>Impl\PawnImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -143,7 +143,7 @@
   <Class Name="ProjPoo.PositionImpl">
     <Position X="2.75" Y="21" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAQAAAAAwAAAAAIAAAAACEAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAgAAQAAAAAwAAAAAIAAAAACEAAAAIAAAA=</HashCode>
       <FileName>Impl\PositionImpl.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -151,7 +151,7 @@
   <Class Name="ProjPoo.FactoryPosition">
     <Position X="1" Y="20" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Impl\FactoryPosition.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -270,14 +270,14 @@
   <Interface Name="ProjPoo.Position">
     <Position X="4.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAQAAAAAwAAAAAIAAAAACEAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAgAAQAAAAAwAAAAAIAAAAACEAAAAIAAAA=</HashCode>
       <FileName>API\Position.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjPoo.FillAlgo">
-    <Position X="1" Y="7.5" Width="1.5" />
+    <Position X="1.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAEAAAAAAAAAAAAEEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAEAAABAAAAAAAAEEAAAAAAAAA=</HashCode>
       <FileName>API\FillAlgo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

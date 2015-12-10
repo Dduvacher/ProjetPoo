@@ -49,6 +49,7 @@
     <Compile Include="API\Players.cs" />
     <Compile Include="API\Position.cs" />
     <Compile Include="API\FillAlgo.cs" />
+    <Compile Include="Impl\Algo.cs" />
     <Compile Include="Impl\Demo.cs" />
     <Compile Include="Impl\Elf.cs" />
     <Compile Include="Impl\FactoryMap.cs" />
@@ -78,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="API\ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Debug\ClassLibrary1.dll">
+      <Link>ClassLibrary1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

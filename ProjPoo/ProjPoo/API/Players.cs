@@ -14,6 +14,6 @@ namespace ProjPoo
         int Order { get; set; }
         bool isTurn { get; set; }
 
-        void addPawns(int size,Race r);
+        void addPawns(int size,Race r,Map m);
     }
 }

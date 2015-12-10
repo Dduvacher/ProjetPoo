@@ -131,7 +131,25 @@ namespace ProjPoo
 
         public void fillMap()
         {
-            throw new NotImplementedException();
+            int[] tabTiles = this.PhilAlgo.execute();
+            foreach(int t in tabTiles)
+            {
+                switch(t)
+                {
+                    case 0:
+                        this.tiles.Add(FlyweightTiles.INSTANCE.getPlain());
+                        break;
+                    case 1:
+                        this.tiles.Add(FlyweightTiles.INSTANCE.getMountain());
+                        break;
+                    case 2:
+                        this.tiles.Add(FlyweightTiles.INSTANCE.getForest());
+                        break;
+                    case 3:
+                        this.tiles.Add(FlyweightTiles.INSTANCE.getWater());
+                        break;
+                }
+            }
         }
     }
 }
