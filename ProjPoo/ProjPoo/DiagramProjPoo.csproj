@@ -71,7 +71,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="API\Race.cs" />
     <Compile Include="API\Tiles.cs" />
-    <Compile Include="API\Type.cs" />
     <Compile Include="API\Water.cs" />
     <Compile Include="Impl\Small.cs" />
     <Compile Include="Impl\Standard.cs" />

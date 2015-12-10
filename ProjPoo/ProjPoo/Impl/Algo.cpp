@@ -10,10 +10,9 @@
 using namespace std;
 
 
-
+//Algorithme qui pose des tuiles aléatoires tout en gardant l'équité entre les tuiles.
 void Algo::fillMap(TileType map[], int size)
 {
-	//TODO : init map tiles with a better algorithm
 	srand(time(NULL));
 	int counter[] = { 0, 0, 0, 0 };
 	int max = size / 4;

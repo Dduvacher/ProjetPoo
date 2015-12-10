@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ProjPoo
 {
+    //représente la tuile Eau.
     public interface Water : Tiles
     {
     }

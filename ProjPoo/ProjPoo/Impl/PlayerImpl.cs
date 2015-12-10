@@ -7,8 +7,6 @@ namespace ProjPoo
 {
     public class PlayerImpl : Player
     {
-        private string LastName;
-        private String FirstName;
         private List<Pawn> pawns;
         private Race race;
 
@@ -86,6 +84,32 @@ namespace ProjPoo
         }
 
         public bool isTurn
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string FirstName
         {
             get
             {
