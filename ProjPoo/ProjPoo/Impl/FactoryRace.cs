@@ -19,38 +19,29 @@ namespace ProjPoo
 
         public Race getElf()
         {
-            Race r = mapRace["elf"];
-
-            if(r==null)
+            if (!mapRace.ContainsKey("elf"))
             {
-                r = new Elf();
-                mapRace.Add("elf", r);
+                mapRace.Add("elf", new Elf());
             }
-            return r;
+            return mapRace["elf"];
         }
 
         public Race getHuman()
         {
-            Race r = mapRace["human"];
-
-            if (r == null)
+            if (!mapRace.ContainsKey("human"))
             {
-                r = new Human();
-                mapRace.Add("human", r);
+                mapRace.Add("human", new Human());
             }
-            return r;
+            return mapRace["human"];
         }
 
         public Race getOrc()
         {
-            Race r = mapRace["orc"];
-
-            if (r == null)
+            if(!mapRace.ContainsKey("orc"))
             {
-                r = new Orc();
-                mapRace.Add("orc", r);
+                mapRace.Add("orc", new Orc());
             }
-            return r;
+            return mapRace["orc"];
         }
     }
 }

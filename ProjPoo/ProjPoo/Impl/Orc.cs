@@ -13,12 +13,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return Attack;
             }
 
             set
             {
-                throw new NotImplementedException();
+                Attack = value;
             }
         }
 
