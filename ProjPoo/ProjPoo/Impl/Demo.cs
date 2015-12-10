@@ -6,6 +6,7 @@ using ModelEtudiant;
 
 namespace ProjPoo
 {
+    //Algorithme pour remplir la map en mode Démo
     public class Demo : FillAlgo
     {
         

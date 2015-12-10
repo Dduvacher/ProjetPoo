@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ProjPoo
 {
+    //c'est une fabrique poids mouche pour les tuiles
     public class FlyweightTiles
     {
 

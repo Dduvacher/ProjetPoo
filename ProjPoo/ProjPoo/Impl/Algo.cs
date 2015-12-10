@@ -15,6 +15,7 @@ namespace ModelEtudiant
         Water = 3
     }
 
+    //fonction appelant l'algorithme C++ en lui donnant les bons paramètres, cette fonction rend un tableau d'entier correspondant aux tuiles.
     public class Algo : IDisposable
     {
         bool disposed = false;

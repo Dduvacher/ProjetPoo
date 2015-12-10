@@ -6,6 +6,7 @@ using ModelEtudiant;
 
 namespace ProjPoo
 {
+    //Algorithme pour remplir la map en mode Small
     public class Small : FillAlgo
     {
         private Map map;

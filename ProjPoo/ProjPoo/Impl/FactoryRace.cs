@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ProjPoo
 {
+    //c'est une fabrique poids mouche pour les races
     public class FactoryRace
     {
         public static FactoryRace INSTANCE = new FactoryRace();
