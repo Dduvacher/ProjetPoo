@@ -81,8 +81,7 @@
     <None Include="API\ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\Debug\ClassLibrary1.dll">
-      <Link>ClassLibrary1.dll</Link>
+    <Content Include="ClassLibrary1.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
