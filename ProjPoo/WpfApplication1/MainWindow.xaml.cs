@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
+using System.Windows.Input;
 using ProjPoo;
 
 
@@ -14,9 +15,8 @@ namespace WpfApplication1
     public partial class MainWindow : Window
     {
         private String[] playerRace = new String[2];
-        private GameBuilder game = null;
-        private int selectedUnit = -1;
-
+        private GameBuilder game = new GameBuilder();
+        private Pawn selectedUnit;
 
         public MainWindow()
         {
@@ -55,7 +55,7 @@ namespace WpfApplication1
                         game.race1 = FactoryRace.INSTANCE.getElf();
                         break;
                 }
-                string r2 = playerRace[0];
+                string r2 = playerRace[1];
                 switch (r2)
                 {
                     case "Human":
@@ -85,44 +85,84 @@ namespace WpfApplication1
                 }
                 game.build();
 
-                Map map = game.getMap();
-                int size = map.Tiles.Count;
+                Map map = game.getgame().Mape;
+                double size = Math.Sqrt(map.Tiles.Count);
 
                 for (int i = 0; i < size; i++)
                 {
                     Grille.RowDefinitions.Add(new RowDefinition()
                     {
-                        Height = new GridLength(Math.Floor((double)Grille.Height / size), GridUnitType.Pixel)
+                        Height = new GridLength(Math.Floor((double)600 / size), GridUnitType.Pixel)
                     });
                     Grille.ColumnDefinitions.Add(new ColumnDefinition()
                     {
-                        Width = new GridLength(Math.Floor((double)Grille.Width / size), GridUnitType.Pixel)
+                        Width = new GridLength(Math.Floor((double)600 / size), GridUnitType.Pixel)
                     });
                 }
-                for (int i = 0; i < size; i++)
+                for (int i = 0; i < size*size; i++)
                 {
                         createTile(i);
                    
                 }
+                Game.Visibility = System.Windows.Visibility.Visible;
+                MainMenu.Visibility = System.Windows.Visibility.Hidden;
             }
         }
 
             public void createTile(int i)
         {
-            Map m = game.getMap();
+            Map m = game.getgame().Mape;
             Tiles t = m.Tiles[i];
-
+            double largeur = Math.Sqrt((double)game.getgame().Mape.Tiles.Count);
             Rectangle r = new Rectangle();
             r.Fill = Image.INSTANCE.brushTile(t);
             Grille.Children.Add(r);
-            Grid.SetRow(r, i);
-            Grid.SetColumn(r, i);
+            Grid.SetRow(r, i/(int)largeur);
+            Grid.SetColumn(r, i%(int)largeur);
 
 
+            if(game.getgame().Mape.positions[i].Pawns.Count != 0)
+            {
+                r = new Rectangle();
+                r.Fill = Image.INSTANCE.brushRace(game.getgame().Mape.positions[i].Pawns[0].race);
+                Grille.Children.Add(r);
+                Grid.SetRow(r, i / (int)largeur);
+                Grid.SetColumn(r, i % (int)largeur);
+            }
+
+            /*foreach (Position p in game.getgame().Mape.nextTo(game.getgame().Mape.SelectedPos))
+            {
+                Rectangle r2 = new Rectangle();
+                r2.Fill = Image.INSTANCE.brushMove();
+                Grille.Children.Add(r2);
+                Grid.SetRow(r2, i / (int)largeur);
+                Grid.SetColumn(r2, i % (int)largeur);
+
+                break;
+            }
+
+            r.MouseLeftButtonDown += new MouseButtonEventHandler(LeftClick);
+            r.MouseRightButtonDown += new MouseButtonEventHandler(RightClick);*/
         }
         
 
+       /* public void LeftClick(object sender, RoutedEventArgs e)
+        {
+            Position p = game.getgame().Mape.SelectedPos;
 
+            List<Position> p1 = new List<Position>();
+
+            foreach (Position pa in game.getgame().Mape.nextTo(p))
+            {
+                p1.Add(pa);
+            }
+
+            int i = Grid.GetRow((Rectangle)sender);
+            int j = Grid.GetColumn((Rectangle)sender);
+            game.getgame().Mape.SelectedPos = new PositionImpl(i, j);
+            createTile(game.getgame().Mape.positions.IndexOf(game.getgame().Mape.SelectedPos));
+            if (p.PosX)
+        }*/
 
         private void NextTurn(object sender, RoutedEventArgs e)
         {

@@ -20,10 +20,6 @@ namespace ProjPoo
         //true si cette position est vide
         bool estVide();
 
-        //true si pos est a coté de cette position
-        bool nextTo(Position pos);
-
-
         //true si pos est a moins de 2 cases de cette position
         bool inRange(Position pos);
 

@@ -19,8 +19,12 @@ namespace ProjPoo
         //Liste des positions de la map
         List<Position> positions { get; set; }
 
+        Position SelectedPos { get; set; }
+
         //fonction permettant d'acceder à la tuile correspondant à la position donnée en paramètre.
         Tiles getTile(Position pos);
+
+        List<Position> nextTo(Position p);
 
         //rempli la carte de tuiles avec le bon nobre de tuiles.
         void fillMap();

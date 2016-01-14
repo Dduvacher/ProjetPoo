@@ -7,16 +7,20 @@ namespace ProjPoo
 {
     public class PositionImpl : Position
     {
+        private int posx;
+        private int posy;
+        private List<Pawn> pawn;
+
         public List<Pawn> Pawns
         {
             get
             {
-                throw new NotImplementedException();
+                return pawn;
             }
 
             set
             {
-                throw new NotImplementedException();
+                pawn = value;
             }
         }
 
@@ -24,12 +28,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return posx;
             }
 
             set
             {
-                throw new NotImplementedException();
+                posx = value;
             }
         }
 
@@ -37,12 +41,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return posy;
             }
 
             set
             {
-                throw new NotImplementedException();
+                posy = value;
             }
         }
 
@@ -78,10 +82,7 @@ namespace ProjPoo
             return Pawns.Count == 0;
         }
 
-        public bool nextTo(Position pos)
-        {
-            return Math.Abs(this.PosX - pos.PosX) + Math.Abs(this.PosY - pos.PosY) == 1;
-        }
+        
 
         public bool inRange(Position pos)
         {

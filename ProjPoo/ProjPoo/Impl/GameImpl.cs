@@ -11,16 +11,21 @@ namespace ProjPoo
         private Player player2;
         private Map map;
 
+        private int turns;
+        private int units;
+        private bool ended;
+
+
         public int Turns
         {
             get
             {
-                throw new NotImplementedException();
+                return turns;
             }
 
             set
             {
-                throw new NotImplementedException();
+                turns = value;
             }
         }
 
@@ -28,12 +33,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return units;
             }
 
             set
             {
-                throw new NotImplementedException();
+                units = value;
             }
         }
 
@@ -41,12 +46,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return player2;
             }
 
             set
             {
-                throw new NotImplementedException();
+                player2 = value;
             }
         }
 
@@ -54,12 +59,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return player1;
             }
 
             set
             {
-                throw new NotImplementedException();
+                player1 = value;
             }
         }
 
@@ -80,19 +85,19 @@ namespace ProjPoo
         {
             get
             {
-                return Ended;
+                return ended;
             }
 
             set
             {
-                Ended = value;
+                ended = value;
             }
         }
 
 
         public GameImpl()
         {
-            Ended = false;
+            ended = false;
         }
         public void setTurns(int nbTurns)
         {

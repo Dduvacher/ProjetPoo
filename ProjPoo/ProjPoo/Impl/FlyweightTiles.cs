@@ -19,48 +19,64 @@ namespace ProjPoo
 
         public Tiles getForest()
         {
-            Tiles t = mapTiles["forest"];
+            Tiles t;
 
-            if (t == null)
+            if (!mapTiles.ContainsKey("forest"))
             {
                 t = new ForestImpl();
                 mapTiles.Add("forest", t);
+            }
+            else
+            {
+                t = mapTiles["forest"];
             }
             return t;
         }
 
         public Tiles getMountain()
         {
-            Tiles t = mapTiles["mountain"];
+            Tiles t;
 
-            if (t == null)
+            if (!mapTiles.ContainsKey("mountain"))
             {
                 t = new MountainImpl();
                 mapTiles.Add("mountain", t);
+            }
+            else
+            {
+                t = mapTiles["mountain"];
             }
             return t;
         }
 
         public Tiles getPlain()
         {
-            Tiles t = mapTiles["plain"];
+            Tiles t;
 
-            if (t == null)
+            if (!mapTiles.ContainsKey("plain"))
             {
                 t = new PlainImpl();
                 mapTiles.Add("plain", t);
             }
+            else
+            {
+                t = mapTiles["plain"];
+            }
             return t;
         }
 
-        public Tiles getWater()
+        public Tiles getWater() 
         {
-            Tiles t = mapTiles["water"];
+            Tiles t;
 
-            if (t == null)
+            if (!mapTiles.ContainsKey("water"))
             {
                 t = new WaterImpl();
                 mapTiles.Add("water", t);
+            }
+            else
+            {
+                t = mapTiles["water"];
             }
             return t;
         }

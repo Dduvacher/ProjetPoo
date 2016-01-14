@@ -79,8 +79,8 @@ namespace ProjPoo
         //intialise la position des unités de base des joueurs
         public void putUnits()
         {
-            int i = 0;
-            int j = 0;
+            int i = 1;
+            int j = 1;
             Map map = game.Mape;
             Position pos;
             foreach (Pawn p in game.Player1.Pawns)
@@ -93,8 +93,11 @@ namespace ProjPoo
             foreach (Pawn p in game.Player1.Pawns)
             {
                 pos = map.positions[map.positions.Count-j];
-                pos.putOn(p, map.getTile(pos));
-                j++;
+                while (!pos.putOn(p, map.getTile(pos)))
+                {
+                    j++;
+                    pos = map.positions[map.positions.Count - j];
+                }
             }
         }
 
@@ -103,9 +106,9 @@ namespace ProjPoo
             throw new System.NotImplementedException();
         }
 
-        public Map getMap()
+        public Game getgame()
         {
-            return this.map;
+            return this.game;
         }
 
         //construit la game

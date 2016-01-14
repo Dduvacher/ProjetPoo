@@ -9,16 +9,22 @@ namespace ProjPoo
     {
         private Dictionary<Tiles,int> victPoint;
 
+
+        private int attack;
+        private int defence;
+        private int life;
+        private int range;
+
         public int Attack
         {
             get
             {
-                return Attack;
+                return attack;
             }
 
             set
             {
-                Attack = value;
+                attack = value;
             }
         }
 
@@ -26,12 +32,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return defence;
             }
 
             set
             {
-                throw new NotImplementedException();
+                defence = value;
             }
         }
 
@@ -39,12 +45,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return life;
             }
 
             set
             {
-                throw new NotImplementedException();
+                life = value;
             }
         }
 
@@ -52,16 +58,16 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return range;
             }
 
             set
             {
-                throw new NotImplementedException();
+                range = value;
             }
         }
 
-   
+
 
         Dictionary<Tiles, int> Race.VictPoint
         {
@@ -78,9 +84,9 @@ namespace ProjPoo
 
         public Orc()
         {
-            Attack = 5;
-            Defence = 2;
-            Life = 17;
+            attack = 5;
+            defence = 2;
+            life = 17;
             victPoint = new Dictionary<Tiles, int>();
             victPoint.Add(FlyweightTiles.INSTANCE.getForest(), 1);
             victPoint.Add(FlyweightTiles.INSTANCE.getMountain(), 2);

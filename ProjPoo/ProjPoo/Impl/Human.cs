@@ -9,16 +9,22 @@ namespace ProjPoo
     {
         private Dictionary<Tiles,int> victPoint;
 
+
+        private int attack;
+        private int defence;
+        private int life;
+        private int range;
+
         public int Attack
         {
             get
             {
-                return Attack;
+                return attack;
             }
 
             set
             {
-                Attack = value;
+                attack = value;
             }
         }
 
@@ -26,12 +32,12 @@ namespace ProjPoo
         {
             get
             {
-                return Defence;
+                return defence;
             }
 
             set
             {
-                Defence = value;
+                defence = value;
             }
         }
 
@@ -39,12 +45,12 @@ namespace ProjPoo
         {
             get
             {
-                return Life;
+                return life;
             }
 
             set
             {
-                Life = value;
+                life = value;
             }
         }
 
@@ -52,12 +58,12 @@ namespace ProjPoo
         {
             get
             {
-                return Range;
+                return range;
             }
 
             set
             {
-                Range = value;
+                range = value;
             }
         }
 
@@ -78,9 +84,9 @@ namespace ProjPoo
 
         public Human()
         {
-            Attack = 6;
-            Defence = 3;
-            Life = 15;
+            attack = 6;
+            defence = 3;
+            life = 15;
             victPoint = new Dictionary<Tiles, int>();
             victPoint.Add(FlyweightTiles.INSTANCE.getForest(), 1);
             victPoint.Add(FlyweightTiles.INSTANCE.getMountain(), 1);

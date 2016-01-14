@@ -33,8 +33,8 @@ namespace WpfApplication1
         {
             water = new ImageBrush(new BitmapImage(new Uri(@"Image/water.png", UriKind.Relative)));
             plain = new ImageBrush(new BitmapImage(new Uri(@"Image/plain.png", UriKind.Relative)));
-            forest = new ImageBrush(new BitmapImage(new Uri("@Image/forest.png", UriKind.Relative)));
-            mountain = new ImageBrush(new BitmapImage(new Uri("@Image/mountain.png", UriKind.Relative)));
+            forest = new ImageBrush(new BitmapImage(new Uri(@"Image/forest.png", UriKind.Relative)));
+            mountain = new ImageBrush(new BitmapImage(new Uri(@"Image/mountain.png", UriKind.Relative)));
 
             human = new ImageBrush(new BitmapImage(new Uri(@"Image/human.png", UriKind.Relative)));
             orc = new ImageBrush(new BitmapImage(new Uri(@"Image/orc.png", UriKind.Relative)));
@@ -65,7 +65,7 @@ namespace WpfApplication1
         }
 
 
-        public Brush brushRace(Tiles a)
+        public Brush brushRace(Race a)
         {
             ImageBrush brush = null;
             if (a is Orc)

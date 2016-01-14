@@ -11,44 +11,62 @@ namespace ProjPoo
     {
         
         private Map map;
+        private int units;
+        private int turns;
+        private Algo alg;
         public Map Map
         {
             get
             {
-                throw new NotImplementedException();
+                return map;
             }
 
             set
             {
-                throw new NotImplementedException();
+                map = value;
             }
         }
 
         public int Units
         {
-            get; set;
+            get
+            {
+                return units;
+            }
+            set
+            {
+                units = value; ;
+            }
         }
 
         public int Turns
         {
-            get; set;
+            get
+            {
+                return turns;
+            }
+            set
+            {
+                turns = value;
+            }
         }
 
         public Algo algo
         {
             get
             {
-                throw new NotImplementedException();
+                return alg;
             }
 
             set
             {
-                throw new NotImplementedException();
+                alg = value;
             }
         }
 
-        public Demo()
+        public Demo(Map map)
         {
+            Map = map;
             Units = 4;
             Turns = 5;
             algo = new Algo();

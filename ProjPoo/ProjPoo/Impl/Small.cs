@@ -10,17 +10,19 @@ namespace ProjPoo
     public class Small : FillAlgo
     {
         private Map map;
-
+        private int units;
+        private int turns;
+        private Algo alg;
         public Map Map
         {
             get
             {
-                throw new NotImplementedException();
+                return map;
             }
 
             set
             {
-                throw new NotImplementedException();
+                map = value;
             }
         }
 
@@ -28,12 +30,11 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return units;
             }
-
             set
             {
-                throw new NotImplementedException();
+                units = value; ;
             }
         }
 
@@ -41,12 +42,11 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return turns;
             }
-
             set
             {
-                throw new NotImplementedException();
+                turns = value;
             }
         }
 
@@ -54,17 +54,20 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return alg;
             }
 
             set
             {
-                throw new NotImplementedException();
+                alg = value;
             }
         }
 
-        public Small()
+     
+
+        public Small(Map m)
         {
+            Map = m;
             Units = 6;
             Turns = 20;
             algo = new Algo();

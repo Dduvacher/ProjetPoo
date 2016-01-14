@@ -11,6 +11,10 @@ namespace ProjPoo
         private FillAlgo fillAlgo;
         private List<Tiles> tiles;
 
+        private int size;
+        private List<Position> position;
+        private Position selectedPos;
+
         public FillAlgo PhilAlgo
         {
             get
@@ -28,12 +32,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return size;
             }
 
             set
             {
-                throw new NotImplementedException();
+                size = value;
             }
         }
 
@@ -54,14 +58,35 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return position;
             }
 
             set
             {
-                throw new NotImplementedException();
+                position = value;
             }
         }
+
+        public Position SelectedPos
+        {
+            get { return selectedPos; }
+            set { selectedPos = value; }
+        }
+
+        public List<Position> nextTo(Position p)
+        {
+            List<Position> l = new List<Position>();
+            foreach (Position p2 in this.positions)
+            {
+                if (Math.Abs(p.PosX - p2.PosX) + Math.Abs(p.PosY - p2.PosY) == 1){
+                    l.Add(p);
+                }
+            }
+
+            return l;
+        }
+
+
 
         public MapImpl(int size)
         {
@@ -115,16 +140,16 @@ namespace ProjPoo
             switch (size)
             {
                 case 0:
-                    this.PhilAlgo = new Demo();
+                    this.PhilAlgo = new Demo(this);
                     break;
                 case 1:
-                    this.PhilAlgo= new Small();
+                    this.PhilAlgo= new Small(this);
                     break;
                 case 2:
-                    this.PhilAlgo = new Standard();
+                    this.PhilAlgo = new Standard(this);
                     break;
                 default:
-                    System.Console.WriteLine("CE MODE N4EXISTE PAS GROS BATARD.");
+                    System.Console.WriteLine("Ce mode n'éxiste pas");
                     break;     
             }
         }

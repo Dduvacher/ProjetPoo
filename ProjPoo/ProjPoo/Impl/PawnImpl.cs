@@ -10,15 +10,18 @@ namespace ProjPoo
         public const double movePointMax = 2;
         private Player player;
         private Position position;
-        private Race race;
+        private Race rac;
+        private Map m;
+        private double mp;
+        private int lp;
 
         public PawnImpl(Player p, Race r,Map m)
         {
             player = p;
-            race = r;
-            MovePoint = movePointMax;
+            rac = r;
+            mp = movePointMax;
             lifePoint = r.Life;
-            map = m;
+            m = m;
         }
 
 
@@ -26,12 +29,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return m;
             }
 
             set
             {
-                throw new NotImplementedException();
+                m = value;
             }
         }
 
@@ -39,12 +42,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return mp;
             }
 
             set
             {
-                throw new NotImplementedException();
+                mp = value;
             }
         }
 
@@ -52,12 +55,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return player;
             }
 
             set
             {
-                throw new NotImplementedException();
+                player = value;
             }
         }
 
@@ -65,12 +68,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return position;
             }
 
             set
             {
-                throw new NotImplementedException();
+                position = value;
             }
         }
 
@@ -78,12 +81,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return rac;
             }
 
             set
             {
-                throw new NotImplementedException();
+                rac = value;
             }
         }
 
@@ -91,23 +94,23 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return lp;
             }
 
             set
             {
-                throw new NotImplementedException();
+                lp = value;
             }
         }
 
         public double getAttack()
         {
-            return race.Attack * (lifePoint / race.Life);
+            return rac.Attack * (lp / rac.Life);
         }
 
         public double getDefence()
         {
-            return race.Defence * (lifePoint / race.Life);
+            return rac.Defence * (lp / rac.Life);
         }
 
         public void attack_action(Position pos)
@@ -144,12 +147,12 @@ namespace ProjPoo
 
         public void useMovePoint(Position pos)
         {
-            if (this.race is Elf)
+            if (this.rac is Elf)
             {
                 if (pos is Mountain) { this.MovePoint -= 2; }
                 else { this.MovePoint -= 1; }
             }
-            else if (this.race is Orc)
+            else if (this.rac is Orc)
             {
                 if (pos is Plain) { this.MovePoint -= 0.5; }
                 else{ this.MovePoint -= 1; }
@@ -183,7 +186,7 @@ namespace ProjPoo
                 }
             }
 
-            else if (this.race is Elf)
+            else if (this.rac is Elf)
             {
                 if (this.position.inRange(pos) && !pos.estVide() && pos.Pawns[0].player != this.player)
                 {
@@ -191,7 +194,7 @@ namespace ProjPoo
                 }
             }
 
-            else if (this.race is Orc && this.map.getTile(this.position) is Mountain)
+            else if (this.rac is Orc && this.map.getTile(this.position) is Mountain)
             {
                 if (this.position.inRange(pos) && !pos.estVide() && pos.Pawns[0].player != this.player)
                 {

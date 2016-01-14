@@ -86,13 +86,13 @@ namespace ModelEtudiant
         }
 
 
-        [DllImport("libCPP.dll", CallingConvention= CallingConvention.Cdecl)]
+        [DllImport("ClassLibrary1.dll", CallingConvention= CallingConvention.Cdecl)]
         extern static void Algo_fillMap(IntPtr algo, TileType[] tiles, int nbTiles);
 
-        [DllImport("libCPP.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("ClassLibrary1.dll", CallingConvention = CallingConvention.Cdecl)]
         extern static IntPtr Algo_new();
 
-        [DllImport("libCPP.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("ClassLibrary1.dll", CallingConvention = CallingConvention.Cdecl)]
         extern static IntPtr Algo_delete(IntPtr algo);
     }
 }

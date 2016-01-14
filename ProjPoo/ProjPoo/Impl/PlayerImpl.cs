@@ -9,24 +9,29 @@ namespace ProjPoo
     {
         private List<Pawn> pawns;
         private Race race;
+        private int point;
+        private int order;
+        private bool turn;
+        private string pseudo;
 
         public PlayerImpl(string pseudo,Race r)
         {
             Pseudo = pseudo;
             race = r;
             isTurn = false;
+            pawns = new List<Pawn>();
         }
 
         public List<Pawn> Pawns
         {
             get
             {
-                throw new NotImplementedException();
+                return pawns;
             }
 
             set
             {
-                throw new NotImplementedException();
+                pawns = value;
             }
         }
         
@@ -35,12 +40,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return race;
             }
 
             set
             {
-                throw new NotImplementedException();
+                race = value;
             }
         }
 
@@ -48,12 +53,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return point;
             }
 
             set
             {
-                throw new NotImplementedException();
+                point = value;
             }
         }
 
@@ -61,12 +66,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return order;
             }
 
             set
             {
-                throw new NotImplementedException();
+                Order = value;
             }
         }
 
@@ -74,12 +79,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return turn;
             }
 
             set
             {
-                throw new NotImplementedException();
+                turn = value;
             }
         }
 
@@ -87,12 +92,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return pseudo;
             }
 
             set
             {
-                throw new NotImplementedException();
+                pseudo = value;
             }
         }
         
@@ -103,17 +108,17 @@ namespace ProjPoo
             {
                 case 0:
                     for (int i = 0; i < 4; i++)
-                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this,r,m));
+                        pawns.Add(FactoryPawn.INSTANCE.createPawn(this,r,m));
                     break;
 
                 case 1:
                     for (int i = 0; i < 6; i++)
-                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r,m));
+                        pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r,m));
                     break;
 
                 case 2:
                     for (int i = 0; i < 8; i++)
-                        Pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r,m));
+                        pawns.Add(FactoryPawn.INSTANCE.createPawn(this, r,m));
                     break;
             }
         }
