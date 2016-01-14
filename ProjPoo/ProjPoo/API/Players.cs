@@ -10,12 +10,8 @@ namespace ProjPoo
         //pions du joueur
         List<Pawn> Pawns { get; set; }
 
-        //nom du joueur
-        string LastName { get; set; }
-
-        //prénom du joueur
-        string FirstName { get; set; }
-
+        //pseudo du joueur
+        string Pseudo { get; set; }
         //race du joueur
         Race Race { get; set; }
 

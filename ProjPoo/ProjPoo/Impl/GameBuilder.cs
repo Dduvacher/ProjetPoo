@@ -10,7 +10,7 @@ namespace ProjPoo
     {
         void addPlayer1(String name, Race race);
         void createGame();
-        void addPlayer2();
+        void addPlayer2(String name, Race race);
     }
 
     public class GameBuilder
@@ -19,7 +19,7 @@ namespace ProjPoo
         private int size;
 
         //nom et prénom des joueurs
-        public string player1FName, player2FName, player1LName, player2LName;
+        public string pseudo1, pseudo2;
 
         //respectivement race du joueur 1 et du joueur 2
         public Race race1;
@@ -38,16 +38,16 @@ namespace ProjPoo
         }
 
         //ajoute le joueur 1 a la game
-        public void addPlayer1(string LastName, string FirstName,Race r)
+        public void addPlayer1(String pseudo,Race r)
         {
-            game.Player1 = new PlayerImpl(LastName,FirstName,r);
+            game.Player1 = new PlayerImpl(pseudo,r);
             game.Player1.addPawns(size, game.Player1.Race,game.Mape);
         }
 
         //ajoute le joueur 2 a la game
-        public void addPlayer2(string LastName, string FirstName, Race r)
+        public void addPlayer2(string pseudo, Race r)
         {
-            game.Player1 = new PlayerImpl(LastName, FirstName, r);
+            game.Player1 = new PlayerImpl(pseudo, r);
             game.Player1.addPawns(size, game.Player1.Race,game.Mape);
         }
 
@@ -103,6 +103,11 @@ namespace ProjPoo
             throw new System.NotImplementedException();
         }
 
+        public Map getMap()
+        {
+            return this.map;
+        }
+
         //construit la game
         public void build()
         {
@@ -110,8 +115,8 @@ namespace ProjPoo
             map = createMap(size, game);
             game.Turns = game.Mape.PhilAlgo.Turns;
             game.Units = game.Mape.PhilAlgo.Units;
-            addPlayer1(player1LName,player1FName,race1);
-            addPlayer2(player2LName, player2FName, race2);
+            addPlayer1(pseudo1,race1);
+            addPlayer2(pseudo2, race2);
             chooseFirstPlayer();
             putUnits();
         }

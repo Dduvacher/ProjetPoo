@@ -41,12 +41,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return tiles;
             }
 
             set
             {
-                throw new NotImplementedException();
+                tiles = value;
             }
         }
 

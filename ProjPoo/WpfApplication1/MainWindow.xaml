@@ -5,25 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="Game" Height="350" Width="525">
+        Title="Game" Height="600" Width="800">
     <Grid>
-        <Grid x:Name="MainMenu" Visibility="Hidden">
-            <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Margin="50,250,0,0" VerticalAlignment="Top" Width="100" Click="OnClickGo" Height="20"/>
-            <TextBox x:Name="J1" Text="Pseudo Joueur 1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="108,65,309,234" TextWrapping="Wrap" Width="100" Height="20"/>
-            <TextBox x:Name="J2" Text="Pseudo Joueur 2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="108,135,309,164" TextWrapping="Wrap" Width="100" Height="20"/>
-            <ListBox x:Name="race1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="200" Margin="234,65,83,234"/>
-            <ListBox x:Name="race2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="200" Margin="234,135,83,164"/>
-            <ListBox x:Name="type" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="150" Margin="255,189,112,30"/>
-            <Label x:Name="SameRace" Content="Les races des deux joueurs doivent être différentes" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="157,90,83,189" />
+        <Grid x:Name="MainMenu" Background="Gray">
+            <Button x:Name="start" Content="Start" HorizontalAlignment="Center" Margin="32,258,385,41" VerticalAlignment="Center" Width="100" Click="Start" Height="20"/>
+            <TextBox x:Name="J1" Text="Pseudo Joueur 1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="32,34,385,256" TextWrapping="Wrap" Width="100" Height="29" Background="Beige"/>
+            <TextBox x:Name="J2" Text="Pseudo Joueur 2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="157,34,260,256" TextWrapping="Wrap" Width="100" Height="29" Background="Beige"/>
+            <ListBox x:Name="raceJ1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="112" Width="100" Margin="32,77,385,130"/>
+            <ListBox x:Name="raceJ2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="112" Width="100" Margin="157,77,260,130"/>
+            <ListBox x:Name="gametype" HorizontalAlignment="Center" VerticalAlignment="Center" Height="112" Width="150" Margin="306,77,61,130"/>
+            <Label x:Name="SameRace" Content="Les races des deux joueurs doivent être différentes" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="172,247,26,41" Width="319" Height="31" FontStyle="Italic" Visibility="Hidden"/>
+            <Label x:Name="Gametype" Content="Type de Partie" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Beige" Margin="306,34,103,256" Height="29" Width="108" />
         </Grid>
-        <Grid x:Name="Game" >
+        <Grid x:Name="Game" Visibility="Hidden">
             <Grid x:Name="select1" HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Width="250"/>
             <Grid x:Name="select2" HorizontalAlignment="Left" Height="155"  VerticalAlignment="Bottom" Width="250"/>
-            <Grid x:Name="GameGrid" HorizontalAlignment="Right" Height="319" VerticalAlignment="Top" Width="267" />
+            <Grid x:Name="Grille" HorizontalAlignment="Right" Height="319" VerticalAlignment="Top" Width="267" />
             <Label x:Name="player1Info" Content="Label" HorizontalAlignment="Left" Margin="0,672,0,0" VerticalAlignment="Top" Height="65" Width="221"/>
             <Label x:Name="player2Info" Content="Label" HorizontalAlignment="Left" Margin="100,672,0,0" VerticalAlignment="Top" Height="65" Width="221"/>
             <Label x:Name="gameInfo" Content="Label" HorizontalAlignment="Left" Margin="200,673,0,-1" VerticalAlignment="Top" Height="65" Width="221"/>
-            <Button x:Name="finish" Content="Finir tour" HorizontalAlignment="Left" Height="33" Margin="300,685,0,0" VerticalAlignment="Top" Width="130" Click="OnClickNext"/>
+            <Button x:Name="finish" Content="Finir tour" HorizontalAlignment="Left" Height="33" Margin="300,685,0,0" VerticalAlignment="Top" Width="130" Click="NextTurn"/>
         </Grid>
     </Grid>
 </Window>

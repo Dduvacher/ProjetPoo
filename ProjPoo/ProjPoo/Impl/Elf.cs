@@ -13,12 +13,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return Attack;
             }
 
             set
             {
-                throw new NotImplementedException();
+                Attack = value;
             }
         }
 
@@ -26,12 +26,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return Defence;
             }
 
             set
             {
-                throw new NotImplementedException();
+                Defence = value;
             }
         }
 
@@ -39,12 +39,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return Life;
             }
 
             set
             {
-                throw new NotImplementedException();
+                Life = value;
             }
         }
 
@@ -52,12 +52,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return Range;
             }
 
             set
             {
-                throw new NotImplementedException();
+                Range = value;
             }
         }
 
@@ -67,12 +67,12 @@ namespace ProjPoo
         {
             get
             {
-                throw new NotImplementedException();
+                return victPoint;
             }
 
             set
             {
-                throw new NotImplementedException();
+                victPoint = value;
             }
         }
 

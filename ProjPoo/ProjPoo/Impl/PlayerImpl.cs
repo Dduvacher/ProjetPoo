@@ -10,10 +10,9 @@ namespace ProjPoo
         private List<Pawn> pawns;
         private Race race;
 
-        public PlayerImpl(string LName, string FName,Race r)
+        public PlayerImpl(string pseudo,Race r)
         {
-            LastName = LName;
-            FirstName = FName;
+            Pseudo = pseudo;
             race = r;
             isTurn = false;
         }
@@ -30,19 +29,7 @@ namespace ProjPoo
                 throw new NotImplementedException();
             }
         }
-
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        
 
         public Race Race
         {
@@ -96,7 +83,7 @@ namespace ProjPoo
             }
         }
 
-        public string LastName
+        public string Pseudo
         {
             get
             {
@@ -108,19 +95,7 @@ namespace ProjPoo
                 throw new NotImplementedException();
             }
         }
-
-        public string FirstName
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        
 
         public void addPawns(int size,Race r,Map m)
         {
